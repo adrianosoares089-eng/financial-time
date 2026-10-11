@@ -25,3 +25,25 @@ footer{border-top-color:#4e4435;font-size:8px}
 @media(max-width:1000px){.upper{grid-template-columns:minmax(0,65%) minmax(0,35%)}.asset{grid-template-columns:minmax(132px,39%) minmax(0,61%)}.clock{min-width:97px;padding:7px 8px}.market{padding:9px}.market h2{font-size:14px}}
 @media(max-height:650px){.masthead{min-height:62px;padding-bottom:6px}.brand-title{font-size:25px}.brand-date{font-size:10px;margin-top:3px}.clock{padding:4px 8px}.time{font-size:15px;margin:2px}.city{font-size:8px}.status{font-size:7px}main{grid-template-rows:minmax(0,1fr) minmax(135px,32%);gap:7px;padding:7px 0}.assets{gap:6px}.asset-info{padding:4px 9px}.ticker{font-size:11px}.subtitle{font-size:9px}.price{font-size:16px}.chartbox{padding:3px 6px 2px 0}.market{padding:8px 10px}.market h2{font-size:13px}.market-sub{display:block;font-size:7px;margin:1px 0}.mover{padding:3px 0}.mover small{font-size:8px}.mover strong{font-size:10px}footer{height:18px;font-size:7px}}
 @media(max-width:730px) and (orientation:landscape){.upper{grid-template-columns:68% 32%}.clock{min-width:75px;padding:4px}.brand-title{font-size:22px}.market h2{font-size:11px}.market-sub{display:none}}
+
+/* V4 · compact market terminal, dedicated blank workspace */
+.upper{grid-template-columns:minmax(0,54%) minmax(0,46%);gap:12px}
+.asset{grid-template-columns:minmax(0,49%) minmax(0,51%);border-color:#282724;background:linear-gradient(100deg,#111110,#090a0a)}
+.asset-info{padding-left:clamp(10px,1.4vw,18px)}
+.chartbox{padding:10px 8px 8px 0}
+.reserved{background:#030303;border-color:#101111}
+.reserved-top{display:none}
+.brand-title{font-size:clamp(27px,2.9vw,38px)}
+.brand-date{color:#c2b8a5;font-size:12px}
+.clock{background:#0b0b0b;border-color:#34302a;box-shadow:none}
+.clock.lisbon{background:#16130f;border-color:#9d835b;box-shadow:inset 0 0 0 1px #30271b}
+.market{background:linear-gradient(155deg,#171612,#0b0b0b);border-color:#3a3328;border-top-color:#c5a97a;padding:clamp(12px,1.4vw,18px)}
+.market h2{font-size:clamp(16px,1.55vw,21px)}
+.market-sub{color:#8f8a80}
+.mover{padding:clamp(7px,.8vw,12px) 0}
+.mover small{font-size:clamp(9px,.85vw,11px);color:#a39e95}
+.mover strong{font-size:clamp(13px,1.25vw,16px)}
+.mover .change{font-size:clamp(12px,1.15vw,15px)}
+@media(max-width:1000px){.upper{grid-template-columns:minmax(0,57%) minmax(0,43%)}.asset{grid-template-columns:minmax(0,48%) minmax(0,52%)}.market h2{font-size:15px}.mover strong{font-size:13px}}
+@media(max-height:650px){.masthead{min-height:65px}.brand-date{font-size:10px}.market{padding:9px 11px}.market h2{font-size:14px}.mover{padding:4px 0}.mover small{font-size:8px}.mover strong{font-size:12px}.mover .change{font-size:12px}}
+@media(max-width:730px) and (orientation:landscape){.upper{grid-template-columns:60% 40%}.asset{grid-template-columns:49% 51%}}

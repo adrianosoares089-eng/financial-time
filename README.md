@@ -1,7 +1,9 @@
-Financial Time V3 — Terminal Profissional
+# Financial Time — Terminal V4
 
-Carrega todos os 10 ficheiros na raiz do repositório GitHub Pages (main). Substitui os 7 anteriores e adiciona os 3 PNG. Mantém as definições de Pages.
+Projeto estático para GitHub Pages. Carrega os 10 ficheiros desta pasta para a raiz do repositório financial-time.
 
-Os dados e os gráficos continuam demonstrativos e não são cotações reais.
+Mudanças: gráficos compactos, espaço livre à direita, cartões inferiores melhorados, data e relógios refinados, ícone FT preto com contorno dourado.
 
-Para atualizar o ícone no ecrã principal do iPad, elimina o atalho antigo e volta a adicioná-lo pelo Safari depois de o site estar atualizado.
+**Atenção:** preços, gráficos e empresas continuam a ser dados demonstrativos, não dados financeiros reais.
+
+Se o ícone antigo persistir no iPad, remove o atalho do ecrã principal, abre a página no Safari e adiciona-a novamente.
