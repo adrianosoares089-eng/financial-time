@@ -1,5 +1,9 @@
-Financial Time V13
+# Financial Time V14
 
-Correção exclusiva da apresentação das percentagens dos quatro investimentos. Mantidos os gráficos, regiões, notícias, relógios e ícones da V12.
+Alterações pontuais face à V13:
+- Nome sob o ícone: Financial Time (manifest e meta iOS). O desenho FT não mudou.
+- Borda dourada superior de 3 px nos quatro cartões de investimentos/gráficos.
+- Cabeçalho das notícias: NEWS DESK (sem FINANCIAL TIME).
+- Relógio: NOVA IORQUE.
 
-Carrega todos os ficheiros e pastas para a raiz do repositório GitHub, substituindo os existentes. Atualiza a página no Safari.
+Carrega todos os ficheiros e pastas na raiz do repositório. Para o nome do atalho iOS mudar, remove o atalho antigo e volta a usar Safari > Partilhar > Adicionar ao ecrã principal; confirma que o nome proposto é Financial Time.

@@ -1,6 +1,6 @@
 {
   "name": "Financial Time",
-  "short_name": "FT",
+  "short_name": "Financial Time",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
