@@ -22,7 +22,7 @@ function ensureNewsPanel(){
  if(placeholder)placeholder.remove();
  const aside=document.createElement('aside');
  aside.className='news-panel';aside.setAttribute('aria-label','Principais notícias financeiras');
- aside.innerHTML='<div class="news-heading"><div><span class="news-eyebrow">FINANCIAL TIME / NEWS DESK</span><h2>Mercados hoje</h2></div><span class="news-dot"></span></div><div class="news-updated" id="newsUpdated">A carregar notícias…</div><div class="news-items" id="newsItems"><p class="news-loading">A carregar notícias…</p></div><div class="news-bottom"><span>FONTES IDENTIFICADAS · LIGAÇÕES EXTERNAS</span><a href="https://news.google.com/search?q=financial%20markets&hl=pt-PT&gl=PT&ceid=PT%3Apt-150" target="_blank" rel="noopener noreferrer">VER MAIS ↗</a></div>';
+ aside.innerHTML='<div class="news-heading"><div><span class="news-eyebrow">FINANCIAL TIME / NEWS DESK</span><h2>Mercados hoje</h2></div></div><div class="news-updated" id="newsUpdated">A carregar notícias…</div><div class="news-items" id="newsItems"><p class="news-loading">A carregar notícias…</p></div><div class="news-bottom"><span>FONTES IDENTIFICADAS · LIGAÇÕES EXTERNAS</span><a href="https://news.google.com/search?q=financial%20markets&hl=pt-PT&gl=PT&ceid=PT%3Apt-150" target="_blank" rel="noopener noreferrer">VER MAIS ↗</a></div>';
  upper.append(aside);
 }
 

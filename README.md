@@ -1,9 +1,7 @@
-# Financial Time V10
+# Financial Time V11
 
-Alterações: gráficos de linha estendidos por toda a largura disponível em cada cartão, começando imediatamente após a cotação; regiões EUA, EUROPA e ÁSIA-PACÍFICO ligeiramente menores; removido o ponto amarelo do cabeçalho de notícias; ícone FT com a moldura dourada mais para dentro.
+Corrige a largura dos gráficos através de grelha CSS de duas colunas: a zona das cotações mantém-se estreita e o canvas ocupa todo o espaço restante até ao bordo direito do cartão. Remove também o ponto dourado das notícias diretamente do HTML gerado por JavaScript.
 
-## Instalação
+Substitui os ficheiros existentes no repositório pelos deste ZIP, incluindo `app.js`, `style.css`, `index.html` e `sw.js`. Conserva as pastas `.github` e `scripts`. Se a versão antiga persistir no Safari, testa num separador privado e atualiza a página.
 
-Descompactar e carregar os ficheiros para a raiz do repositório `financial-time`, substituindo os anteriores. Manter a estrutura de pastas `.github/workflows` e `scripts` para as atualizações automáticas das notícias. Abrir o site e atualizar no Safari.
-
-As cotações e os movimentos semanais dos índices continuam demonstrativos. O painel de notícias lê `news.json`; a atualização diária depende da configuração e execução correta do GitHub Actions.
+As cotações e os movimentos semanais apresentados continuam a ser dados demonstrativos.
