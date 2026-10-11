@@ -10,4 +10,33 @@ function series(seed,change){let val=50;const out=[];for(let i=0;i<90;i++){val+=
 function draw(canvas,asset){if(!canvas)return;const r=canvas.getBoundingClientRect();if(r.width<10||r.height<10)return;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=r.width,h=r.height,p={l:5,r:34,t:11,b:10},cw=w-p.l-p.r,ch=h-p.t-p.b;if(cw<10||ch<8)return;const vals=series(asset.seed,asset.change),lo=Math.min(...vals)-.8,hi=Math.max(...vals)+.8,x=i=>p.l+i*cw/(vals.length-1),y=v=>p.t+(hi-v)*ch/(hi-lo),color=asset.change>=0?'#36d49a':'#f06f76';const grad=ctx.createLinearGradient(0,p.t,0,h);grad.addColorStop(0,asset.change>=0?'rgba(54,212,154,.18)':'rgba(240,111,118,.18)');grad.addColorStop(1,'rgba(0,0,0,0)');ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));ctx.lineTo(x(vals.length-1),h-p.b);ctx.lineTo(x(0),h-p.b);ctx.closePath();ctx.fillStyle=grad;ctx.fill();ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));ctx.strokeStyle=color;ctx.lineWidth=2;ctx.lineJoin='round';ctx.stroke();ctx.fillStyle=color;ctx.beginPath();ctx.arc(x(vals.length-1),y(vals.at(-1)),2.8,0,Math.PI*2);ctx.fill()}
 function render(){document.getElementById('assets').innerHTML=assets.map((a,i)=>`<article class="asset"><div class="asset-info"><div class="ticker">${a.symbol}</div><div class="subtitle">${a.name}</div><div class="quote"><span class="price">${fmt(a.price,a.currency)}</span><span class="change ${a.change>=0?'up':'down'}">${a.change>=0?'▲':'▼'} ${Math.abs(a.change).toFixed(2)}%</span></div></div><div class="chartbox"><canvas id="chart${i}" aria-label="Gráfico ilustrativo ${a.symbol}"></canvas><span class="chart-caption">1 MÊS</span></div></article>`).join('');document.getElementById('markets').innerHTML=markets.map((m,mi)=>`<article class="market"><div><div class="market-title"><h2>${m.name}</h2><span class="region">${m.region}</span></div><div class="market-sub">DESEMPENHO SEMANAL</div></div>${['up','down'].map(type=>{const a=m[type];return `<button class="mover" data-market="${mi}" data-type="${type}"><span><small>${type==='up'?'▲ MAIOR SUBIDA':'▼ MAIOR DESCIDA'}</small><strong>${a.ticker}</strong></span><span class="change ${type==='up'?'up':'down'}">${a.pct>0?'+':''}${a.pct.toFixed(1)}%</span></button>`}).join('')}</article>`).join('');redraw();document.querySelectorAll('.mover').forEach(button=>button.addEventListener('click',()=>{const m=markets[Number(button.dataset.market)],a=m[button.dataset.type];document.getElementById('detailContent').innerHTML=`<small>DEMONSTRAÇÃO FICTÍCIA · ${m.name}</small><h2>${a.name}</h2><p><strong>${a.ticker}</strong> · Variação semanal ilustrativa: <strong>${a.pct>0?'+':''}${a.pct}%</strong></p><p>${a.description}</p><p>Não existem notícias verificadas nem uma explicação real do movimento nesta versão. Estes valores e empresas são exclusivamente demonstrativos.</p>`;document.getElementById('details').showModal()}))}
 function redraw(){assets.forEach((a,i)=>draw(document.getElementById('chart'+i),a))}
-updateClocks();setInterval(updateClocks,1000);render();window.addEventListener('resize',redraw);document.getElementById('close').onclick=()=>document.getElementById('details').close();document.getElementById('details').addEventListener('click',e=>{if(e.target.id==='details')e.target.close()});if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+updateClocks();setInterval(updateClocks,1000);render();window.addEventListener('resize',redraw);loadNews();document.getElementById('close').onclick=()=>document.getElementById('details').close();document.getElementById('details').addEventListener('click',e=>{if(e.target.id==='details')e.target.close()});if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+
+
+// Notícias: geradas por GitHub Actions em news.json. Não há notícias fictícias.
+async function loadNews(){
+ const holder=document.getElementById('newsItems'),stamp=document.getElementById('newsUpdated');
+ if(!holder)return;
+ try{
+  const response=await fetch('./news.json?refresh='+Math.floor(Date.now()/3600000),{cache:'no-store'});
+  if(!response.ok)throw Error('Sem ficheiro de notícias');
+  const payload=await response.json();
+  const items=(payload.items||[]).filter(n=>n.title&&/^https?:\/\//.test(n.url)).slice(0,5);
+  if(!items.length)throw Error('Sem notícias disponíveis');
+  const dt=payload.updated_at?new Date(payload.updated_at):null;
+  const good=dt&&!Number.isNaN(dt.getTime());
+  stamp.textContent=(good?'ÚLTIMA RECOLHA · '+new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}).format(dt):'ÚLTIMA RECOLHA NÃO DISPONÍVEL')+' · '+items.length+' DESTAQUES';
+  holder.replaceChildren();
+  for(const [i,n] of items.entries()){
+   const a=document.createElement('a');a.className='news-item';a.href=n.url;a.target='_blank';a.rel='noopener noreferrer';
+   const top=document.createElement('div');top.className='news-meta';
+   const number=document.createElement('span');number.textContent=String(i+1).padStart(2,'0');
+   const source=document.createElement('span');source.textContent=String(n.source||'FONTE EXTERNA').toUpperCase();
+   top.append(number,source);
+   const title=document.createElement('div');title.className='news-title';title.textContent=n.title;
+   const date=document.createElement('span');date.className='news-date';
+   if(n.published_at){const d=new Date(n.published_at);if(!Number.isNaN(d.getTime()))date.textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'short'}).format(d)}
+   a.append(top,title,date);holder.append(a);
+  }
+ }catch(e){stamp.textContent='NOTÍCIAS INDISPONÍVEIS';holder.innerHTML='<p class="news-loading">Não foi possível carregar as notícias. Usa «Ver mais» para consultar as últimas notícias financeiras.</p>'}
+}
