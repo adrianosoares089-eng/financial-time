@@ -210,3 +210,37 @@ footer b{color:#a79576}
  .section-eyebrow{padding:5px 2px 5px!important}
  .section-eyebrow,.news-eyebrow{font-size:11px!important}
 }
+
+/* V17 — aligned editorial headings, inset news box, compact weekly and new lower-right panels */
+.upper{align-items:stretch!important}
+.market-area,.news-zone{min-width:0;min-height:0;display:flex;flex-direction:column;border-top:3px solid #c5a97a}
+.news-zone{border-top-width:3px}
+.market-area .section-eyebrow,.news-zone .section-eyebrow{height:35px;min-height:35px;display:flex;align-items:center;padding:6px 2px!important;box-sizing:border-box}
+.news-panel{flex:1;min-height:0;border:1px solid #4b4232!important;border-top:1px solid #4b4232!important;border-radius:3px!important;margin:0!important;padding:clamp(9px,1.1vw,14px)!important}
+.news-updated{margin-top:0!important}
+main{grid-template-rows:minmax(0,1fr) minmax(155px,30%)}
+.bottom-grid{display:grid;grid-template-columns:minmax(0,61%) minmax(0,39%);gap:12px;min-height:0}
+.weekly-section{width:100%!important;max-width:100%!important;height:100%;min-width:0}
+.weekly-body .markets{gap:6px!important}
+.weekly-body .market{padding:clamp(5px,.7vw,9px)!important}
+.weekly-body .market h2{font-size:clamp(11px,1.05vw,14px)!important}
+.weekly-body .region{font-size:clamp(9px,.85vw,11px)!important}
+.weekly-body .market-sub{display:none!important}
+.weekly-body .mover{padding:3px 0!important}
+.weekly-body .mover small{font-size:clamp(7px,.65vw,9px)!important;white-space:nowrap}
+.mover-arrow.up{color:var(--green)!important}.mover-arrow.down{color:var(--red)!important}
+.insights{display:grid;grid-template-columns:1.05fr 1fr;gap:8px;min-width:0;min-height:0}
+.insight{border:1px solid #3c372d;border-top:3px solid #c5a97a;background:#0b0c0c;padding:8px;min-width:0;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.insight-title{color:#d7bf91;font-size:clamp(8px,.82vw,11px);letter-spacing:.12em;font-weight:700;white-space:nowrap;margin-bottom:6px}
+.cap-row{display:flex;align-items:center;gap:7px;min-height:0;flex:1}
+.donut{width:clamp(56px,7.3vw,104px);aspect-ratio:1;border-radius:50%;flex:none;background:conic-gradient(#34312b 0% 100%);position:relative;display:grid;place-items:center}
+.donut:before{content:'';position:absolute;inset:23%;border-radius:50%;background:#0b0c0c}
+.donut span{position:relative;color:#c9b68f;font-size:11px;font-weight:700}
+.cap-legend{color:#92918b;font-size:clamp(8px,.7vw,10px);line-height:1.3;min-width:0}
+.cap-legend-row{display:flex;align-items:center;gap:4px;margin:2px 0}.cap-legend-row i{width:6px;height:6px;flex:none;border-radius:50%}.cap-legend-row b{margin-left:auto;color:#e5ddcb}
+.insight-note{font-size:clamp(7px,.58vw,9px);color:#85827b;line-height:1.2;margin-top:4px}
+.earnings-list{flex:1;min-height:0;color:#a9a49a;font-size:clamp(9px,.8vw,11px)}
+.earning-row{display:flex;justify-content:space-between;gap:4px;border-top:1px solid #2e2b27;padding:4px 0}.earning-row strong{font-weight:600}.earning-row span{color:#c6aa7e;white-space:nowrap}
+.earnings-link{color:#c5aa7d;font-size:clamp(7px,.65vw,9px);text-decoration:none;letter-spacing:.06em;margin-top:4px}
+@media(max-width:1050px){.bottom-grid{grid-template-columns:minmax(0,60%) minmax(0,40%);gap:7px}.insights{gap:5px}.insight{padding:5px}.donut{width:52px}.weekly-body .market h2{font-size:11px!important}}
+@media(max-height:650px){.market-area .section-eyebrow,.news-zone .section-eyebrow{height:25px;min-height:25px}.insight-title{margin-bottom:3px}.insight-note{font-size:7px}.weekly-body .market h2{font-size:10px!important}}
