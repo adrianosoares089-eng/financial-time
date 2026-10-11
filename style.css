@@ -47,3 +47,22 @@ footer{border-top-color:#4e4435;font-size:8px}
 @media(max-width:1000px){.upper{grid-template-columns:minmax(0,57%) minmax(0,43%)}.asset{grid-template-columns:minmax(0,48%) minmax(0,52%)}.market h2{font-size:15px}.mover strong{font-size:13px}}
 @media(max-height:650px){.masthead{min-height:65px}.brand-date{font-size:10px}.market{padding:9px 11px}.market h2{font-size:14px}.mover{padding:4px 0}.mover small{font-size:8px}.mover strong{font-size:12px}.mover .change{font-size:12px}}
 @media(max-width:730px) and (orientation:landscape){.upper{grid-template-columns:60% 40%}.asset{grid-template-columns:49% 51%}}
+
+/* V5 — final typography, equal clocks, quieter charts and market hierarchy */
+.brand-title{letter-spacing:-.06em}
+.clock,.clock.lisbon{background:#0b0b0b;border:1px solid #34302a;box-shadow:none;color:var(--text)}
+.clock.lisbon .city,.clock.lisbon .time,.clock.lisbon .status{color:inherit}
+.clock.lisbon .city{color:#b0aca5}.clock.lisbon .status{color:#b4a38c}
+.price{font-size:clamp(19px,2vw,27px);font-weight:700;letter-spacing:-.045em}
+.asset{grid-template-columns:minmax(0,51%) minmax(0,49%)}
+.chartbox{padding:14px 13px 12px 0}
+.reserved{background:transparent;border:0}
+.market{border-top-width:2px}
+.market-title{padding-bottom:3px}
+.market h2{color:#f0e9dd}
+.market-sub{color:#8e8981}
+.mover{border-top-color:#2a2824}
+.mover strong{font-weight:700;color:#eeeae3}
+footer{font-size:8px;color:#686a67;border-top-color:#34312c}
+footer b{color:#a79576}
+@media(max-height:650px){.price{font-size:18px}.chartbox{padding:7px 10px 6px 0}.market h2{font-size:14px}.mover strong{font-size:12px}}
