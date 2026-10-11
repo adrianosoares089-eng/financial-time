@@ -112,3 +112,9 @@ footer b{color:#a79576}
 .news-panel{display:flex!important;visibility:visible!important;opacity:1!important;min-width:0!important;position:relative!important;z-index:1}
 @media(max-width:1000px){.upper{grid-template-columns:minmax(0,54%) minmax(0,46%)}.asset-info{flex-basis:111px!important;width:111px!important}.chartbox{flex-basis:135px!important;width:135px!important}.region{font-size:11px!important}}
 @media(max-height:650px){.asset-info{flex-basis:108px!important;width:108px!important}.chartbox{flex-basis:130px!important;width:130px!important}.region{font-size:10px!important}}
+
+/* V9 — longer sparklines, still flush against quotes; restrained region labels */
+.chartbox{flex-basis:205px!important;width:205px!important;max-width:calc(100% - 116px)!important}
+.region{font-size:clamp(10px,1.0vw,12px)!important;letter-spacing:.045em!important}
+@media(max-width:1000px){.chartbox{flex-basis:185px!important;width:185px!important;max-width:calc(100% - 111px)!important}.region{font-size:10.5px!important}}
+@media(max-height:650px){.chartbox{flex-basis:180px!important;width:180px!important;max-width:calc(100% - 108px)!important}.region{font-size:10px!important}}
