@@ -164,3 +164,22 @@ footer b{color:#a79576}
 
 /* V14 — thicker gold accent above each instrument; all other proportions unchanged */
 .asset{border-top:3px solid #c5a97a!important;}
+
+/* V15 — one continuous gold rule for MARKET and WEEKLY PERFORMANCE. */
+.asset{border-top:1px solid #292827!important}
+.market{border-top:1px solid #484034!important}
+.market-area,.weekly-section{min-height:0;min-width:0;display:flex;flex-direction:column;border-top:3px solid #c5a97a}
+.section-eyebrow{flex:0 0 auto;color:#bca780;font-size:clamp(8px,.72vw,10px);font-weight:700;letter-spacing:.16em;line-height:1.15;padding:7px 2px 6px}
+.market-area .assets{flex:1;min-height:0}
+.weekly-body{display:grid;grid-template-columns:minmax(0,76%) minmax(0,24%);gap:10px;flex:1;min-height:0}
+.weekly-body .markets{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;min-width:0;min-height:0}
+.weekly-reserved{background:transparent;min-width:0}
+.weekly-body .market{min-width:0;padding:clamp(7px,.85vw,11px)}
+.weekly-body .market h2{font-size:clamp(12px,1.18vw,16px)}
+.weekly-body .market-title{flex-wrap:wrap;row-gap:2px}
+.weekly-body .region{font-size:clamp(10px,.95vw,12px)!important}
+.weekly-body .mover{gap:4px}
+.weekly-body .mover strong{font-size:clamp(10px,1vw,13px)}
+.weekly-body .mover .change{font-size:clamp(10px,1vw,12px);flex-shrink:0}
+@media(max-width:1000px){.weekly-body{grid-template-columns:minmax(0,81%) minmax(0,19%);gap:7px}.weekly-body .markets{gap:6px}.weekly-body .market{padding:7px}.weekly-body .market h2{font-size:12px}.weekly-body .region{font-size:10px!important}}
+@media(max-height:650px){.section-eyebrow{padding:4px 2px 4px;font-size:8px}.weekly-body .market-sub{font-size:7px}.weekly-body .mover{padding:2px 0}.weekly-body .mover strong{font-size:10px}.weekly-body .mover .change{font-size:10px}}
