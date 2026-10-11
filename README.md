@@ -1,4 +1,4 @@
-# Financial Time V17
+# Financial Time V18
 
 Carrega todos os ficheiros e pastas na raiz do repositório GitHub Pages.
 
@@ -11,3 +11,9 @@ Carrega todos os ficheiros e pastas na raiz do repositório GitHub Pages.
 **Importante:** os novos painéis mostram «A aguardar dados verificados» e «Agenda por atualizar» enquanto não houver informação real validada. Não são inventadas percentagens ou datas de resultados. Para alimentar os painéis, preencher `market-data.json` com `verified: true`, `regions: [{"name":"América do Norte","percent": ...}]`, `source`, `as_of`, e `earnings.companies: [{"name":"...","date":"..."}]`. A atualização automática existente aplica-se apenas às notícias, não a estes novos dados.
 
 As cotações e desempenhos existentes continuam demonstrativos.
+
+## Ajustes V18
+- Datas das notícias movidas para a linha da fonte, evitando cortes abaixo dos títulos.
+- Espaçamento e alinhamento dos cartões Weekly Performance equilibrados e aproximados do cabeçalho.
+- Atualização da cache e versões de CSS/JavaScript para o Safari.
+- Painéis de capitalização mundial e resultados continuam prontos a receber dados **verificados**, sem inventar valores.

@@ -244,3 +244,26 @@ main{grid-template-rows:minmax(0,1fr) minmax(155px,30%)}
 .earnings-link{color:#c5aa7d;font-size:clamp(7px,.65vw,9px);text-decoration:none;letter-spacing:.06em;margin-top:4px}
 @media(max-width:1050px){.bottom-grid{grid-template-columns:minmax(0,60%) minmax(0,40%);gap:7px}.insights{gap:5px}.insight{padding:5px}.donut{width:52px}.weekly-body .market h2{font-size:11px!important}}
 @media(max-height:650px){.market-area .section-eyebrow,.news-zone .section-eyebrow{height:25px;min-height:25px}.insight-title{margin-bottom:3px}.insight-note{font-size:7px}.weekly-body .market h2{font-size:10px!important}}
+
+/* V18 — metadata on one uncut line; balanced weekly cards. */
+.news-panel{display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.news-items{display:flex!important;flex-direction:column!important;justify-content:space-evenly!important;gap:0!important;min-height:0!important;overflow:hidden!important}
+.news-item{display:flex!important;flex-direction:column!important;justify-content:center!important;flex:1 1 0!important;min-height:0!important;overflow:hidden!important;padding:3px 0!important}
+.news-meta{display:flex!important;align-items:baseline!important;gap:7px!important;flex-wrap:nowrap!important;min-width:0!important;line-height:1.35!important}
+.news-meta span{white-space:nowrap!important}
+.news-meta span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis}
+.news-meta .news-date{display:block!important;flex:none!important;margin-left:auto!important;font-size:clamp(7px,.65vw,9px)!important;letter-spacing:.03em!important;color:#98918a!important;text-transform:uppercase}
+.news-title{margin:3px 0 0!important;line-height:1.22!important;-webkit-line-clamp:2!important;min-height:0!important}
+.weekly-section>.section-eyebrow{height:28px!important;min-height:28px!important;padding:4px 2px 3px!important;display:flex!important;align-items:center!important}
+.weekly-body{align-items:stretch!important}
+.weekly-body .markets{align-items:stretch!important}
+.weekly-body .market{justify-content:center!important;gap:clamp(5px,.65vw,10px)!important}
+.weekly-body .market-title{margin-bottom:clamp(4px,.5vw,7px)!important}
+.weekly-body .mover{flex:0 0 auto!important}
+@media(max-height:650px){
+ .news-item{padding:2px 0!important}
+ .news-title{font-size:clamp(9px,.91vw,11px)!important;line-height:1.16!important;margin-top:1px!important}
+ .news-meta{font-size:clamp(7px,.67vw,9px)!important}
+ .weekly-section>.section-eyebrow{height:23px!important;min-height:23px!important}
+ .weekly-body .market{gap:3px!important}
+}

@@ -46,10 +46,9 @@ async function loadNews(){
    const number=document.createElement('span');number.textContent=String(i+1).padStart(2,'0');
    const source=document.createElement('span');source.textContent=String(n.source||'FONTE EXTERNA').toUpperCase();
    top.append(number,source);
+   if(n.published_at){const published=new Date(n.published_at);if(!Number.isNaN(published.getTime())){const dateLabel=document.createElement('span');dateLabel.className='news-date';dateLabel.textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'short'}).format(published);top.append(dateLabel)}}
    const title=document.createElement('div');title.className='news-title';title.textContent=n.title;
-   const date=document.createElement('span');date.className='news-date';
-   if(n.published_at){const d=new Date(n.published_at);if(!Number.isNaN(d.getTime()))date.textContent=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'short'}).format(d)}
-   a.append(top,title,date);holder.append(a);
+   a.append(top,title);holder.append(a);
   }
  }catch(e){stamp.textContent='NOTÍCIAS INDISPONÍVEIS';holder.innerHTML='<p class="news-loading">Não foi possível carregar as notícias. Usa «Ver mais» para consultar as últimas notícias financeiras.</p>'}
 }
