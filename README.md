@@ -1,11 +1,5 @@
-# Financial Time V15
+Financial Time V16
 
-Alterações sobre a V14:
-- Uma única linha dourada no topo da secção dos quatro gráficos, com o rótulo MARKET.
-- Sem linhas douradas individuais entre os cartões dos gráficos.
-- Uma única linha dourada no topo da secção inferior, com o rótulo WEEKLY PERFORMANCE.
-- Três índices inferiores compactados à esquerda; área inferior direita deliberadamente vazia.
-- Ícone FT, nome Financial Time, notícias e relógios preservados.
+Alterações: títulos MARKET, NEWS DESK e WEEKLY PERFORMANCE maiores; barra do NEWS DESK com 3px; removido «Mercados hoje»; secção Weekly Performance limitada à largura dos três cartões compactados à esquerda, terminando exatamente no Asian Titans 50.
 
-Carrega todos os ficheiros e pastas na raiz do repositório GitHub Pages, substituindo os anteriores.
-Os dados financeiros e o desempenho semanal continuam demonstrativos.
+Substituir os ficheiros na raiz do repositório, preservando .github/workflows e scripts. Abrir a página com ?v=16 para verificar a atualização.
