@@ -1,19 +1,11 @@
-# Financial Time V18
+# Financial Time V20 — gráficos intradiários
 
-Carrega todos os ficheiros e pastas na raiz do repositório GitHub Pages.
+Mantém o design da V19. **IWDA.AS, SWRD.AS, SPYL.SW**: gráfico de 5 minutos da última sessão de bolsa (incluindo a sessão em curso); percentagem relativa ao último preço disponível da sessão anterior. **QNT-USD**: gráfico de 5 minutos do dia civil corrente, das 00:00 às 24:00 em **Europe/Lisbon**, incluindo mudanças de horário de verão; percentagem desde a primeira amostra disponível após as 00:00.
 
-## Novas secções
-- NEWS DESK alinhado com MARKET, com moldura própria abaixo da barra dourada.
-- WEEKLY PERFORMANCE mais compacta, sem «DESEMPENHO SEMANAL», com setas verdes e vermelhas.
-- GLOBAL MARKET CAP: gráfico circular preparado para dados reais verificados por continente.
-- EARNINGS THIS WEEK: agenda preparada para empresas com resultados nesta semana.
+## Instalação
 
-**Importante:** os novos painéis mostram «A aguardar dados verificados» e «Agenda por atualizar» enquanto não houver informação real validada. Não são inventadas percentagens ou datas de resultados. Para alimentar os painéis, preencher `market-data.json` com `verified: true`, `regions: [{"name":"América do Norte","percent": ...}]`, `source`, `as_of`, e `earnings.companies: [{"name":"...","date":"..."}]`. A atualização automática existente aplica-se apenas às notícias, não a estes novos dados.
+Substitui todos os ficheiros no repositório GitHub Pages, **incluindo** `.github/workflows/update-quotes.yml` e `scripts/update_quotes.py`. Ativa as permissões de escrita para GitHub Actions (Settings → Actions → General → Workflow permissions → Read and write permissions) e executa **Actions → Atualizar cotações de mercado → Run workflow**. Verifica `market-quotes.json`. Abre o site com `?v=20`.
 
-As cotações e desempenhos existentes continuam demonstrativos.
+## Limitações
 
-## Ajustes V18
-- Datas das notícias movidas para a linha da fonte, evitando cortes abaixo dos títulos.
-- Espaçamento e alinhamento dos cartões Weekly Performance equilibrados e aproximados do cabeçalho.
-- Atualização da cache e versões de CSS/JavaScript para o Safari.
-- Painéis de capitalização mundial e resultados continuam prontos a receber dados **verificados**, sem inventar valores.
+Fonte Yahoo Finance não oficial, sujeita a falhas, limitações e atrasos. O GitHub Actions é solicitado a cada 15 minutos, **não garante pontualidade**. Gráficos de 5 minutos dependem da disponibilidade dos dados na fonte. O valor do QNT às 00:00 é aproximado pela primeira amostra disponível depois da meia-noite; não é uma cotação oficial de abertura. Na ausência de amostras do novo dia, QNT mostra indisponível até nova recolha; se a fonte falhar, os ETFs podem mostrar dados antigos, identificáveis pela hora de recolha. Sem streaming nem atualização ao minuto. Outros painéis continuam com dados demonstrativos ou aguardam dados reais.
