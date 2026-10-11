@@ -145,3 +145,19 @@ footer b{color:#a79576}
 .region{font-size:clamp(11px,1.14vw,14px)!important;letter-spacing:.045em!important}
 @media(max-width:1000px){.region{font-size:11px!important}}
 @media(max-height:650px){.region{font-size:10.5px!important}.asset-info{padding-top:2px!important;padding-bottom:2px!important}.quote .change{font-size:10px!important}}
+
+/* V13 — fix clipping of percentage changes ONLY. Keep chart, regions, news and icons unchanged. */
+.asset-info{min-height:0!important;overflow:hidden!important;justify-content:center!important;gap:0!important;padding-top:3px!important;padding-bottom:3px!important}
+.asset-info .ticker{line-height:1.08!important;flex-shrink:0!important}
+.asset-info .subtitle{line-height:1.1!important;flex-shrink:0!important}
+.asset-info .quote{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;flex:0 0 auto!important;gap:2px!important;margin-top:3px!important;line-height:1!important;min-height:0!important}
+.asset-info .quote .price{font-size:clamp(16px,1.8vw,23px)!important;line-height:1.05!important;flex:0 0 auto!important}
+.asset-info .quote .change{font-size:clamp(10px,1.0vw,12px)!important;line-height:1.05!important;display:block!important;flex:0 0 auto!important;margin:0!important;padding:0!important}
+@media(max-height:650px){
+ .asset-info{padding-top:2px!important;padding-bottom:2px!important}
+ .asset-info .ticker{font-size:10px!important}
+ .asset-info .subtitle{font-size:8px!important}
+ .asset-info .quote{gap:1px!important;margin-top:2px!important}
+ .asset-info .quote .price{font-size:16px!important}
+ .asset-info .quote .change{font-size:10px!important}
+}

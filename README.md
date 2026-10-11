@@ -1,5 +1,5 @@
-# Financial Time V12
+Financial Time V13
 
-Correções: percentagens das quatro cotações totalmente visíveis abaixo do preço; regiões EUA, EUROPA e ÁSIA-PACÍFICO ligeiramente maiores. Gráficos e notícias preservados.
+Correção exclusiva da apresentação das percentagens dos quatro investimentos. Mantidos os gráficos, regiões, notícias, relógios e ícones da V12.
 
-Substitui todos os ficheiros da raiz do repositório pelos desta pasta, incluindo as pastas `.github` e `scripts`. Atualiza o Safari depois da publicação. Os preços e movimentos continuam demonstrativos.
+Carrega todos os ficheiros e pastas para a raiz do repositório GitHub, substituindo os existentes. Atualiza a página no Safari.
