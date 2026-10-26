@@ -9,12 +9,12 @@
       "up": {
         "name": "Lumentum",
         "ticker": "LITE",
-        "pct": 8.64
+        "pct": 10.43
       },
       "down": {
         "name": "Fair Isaac",
         "ticker": "FICO",
-        "pct": -16.45
+        "pct": -15.6
       },
       "coverage": 503,
       "total": 503
@@ -30,7 +30,7 @@
       "down": {
         "name": "EssilorLuxottica",
         "ticker": "EL.PA",
-        "pct": -3.39
+        "pct": -3.42
       },
       "coverage": 50,
       "total": 50
