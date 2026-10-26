@@ -7,30 +7,30 @@
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "Comfort Systems USA",
-        "ticker": "FIX",
-        "pct": 6.69
+        "name": "Lumentum",
+        "ticker": "LITE",
+        "pct": 8.64
       },
       "down": {
         "name": "Fair Isaac",
         "ticker": "FICO",
-        "pct": -8.11
+        "pct": -16.45
       },
-      "coverage": 502,
+      "coverage": 503,
       "total": 503
     },
     {
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Hermès",
-        "ticker": "RMS.PA",
-        "pct": 4.4
+        "name": "Nokia",
+        "ticker": "NOKIA.HE",
+        "pct": 5.86
       },
       "down": {
-        "name": "Banco Santander",
-        "ticker": "SAN.MC",
-        "pct": -3.53
+        "name": "EssilorLuxottica",
+        "ticker": "EL.PA",
+        "pct": -3.39
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Mitsubishi Corporation",
-        "ticker": "8058.T",
-        "pct": 4.14
+        "name": "Bharti Airtel",
+        "ticker": "BHARTIARTL.NS",
+        "pct": 1.34
       },
       "down": {
-        "name": "Tokyo Electron",
-        "ticker": "8035.T",
-        "pct": -3.68
+        "name": "HDFC Bank",
+        "ticker": "HDFCBANK.NS",
+        "pct": -0.69
       },
       "coverage": 50,
       "total": 50
