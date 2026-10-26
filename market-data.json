@@ -2,8 +2,14 @@
   "market_cap": {
     "verified": false,
     "regions": [],
-    "source": null,
-    "as_of": null
+    "source": "Banco Mundial / WFE",
+    "as_of": null,
+    "status": "Cobertura insuficiente",
+    "missing_markets": [
+      "Reino Unido",
+      "França"
+    ],
+    "coverage": 72
   },
   "earnings": {
     "verified": false,

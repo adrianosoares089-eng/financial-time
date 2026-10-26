@@ -1,16 +1,66 @@
 'use strict';
-// Dados ilustrativos. NÃO representam preços, empresas ou movimentos reais.
-const assets=[{symbol:'IWDA.AS',name:'iShares Core MSCI World',currency:'EUR',price:102.84,change:0.82,seed:3},{symbol:'SWRD.AS',name:'SPDR MSCI World',currency:'EUR',price:39.61,change:0.56,seed:7},{symbol:'SPYL.SW',name:'SPDR S&P 500',currency:'USD',price:15.72,change:-0.31,seed:11},{symbol:'QNT-USD',name:'Quant Network',currency:'USD',price:91.36,change:2.47,seed:17}];
+// As cotações são carregadas de market-quotes.json; sem valores fictícios.
+const assets=[
+ {symbol:'IWDA.AS',name:'iShares Core MSCI World'},
+ {symbol:'SWRD.AS',name:'SPDR MSCI World'},
+ {symbol:'SPYL.SW',name:'SPDR S&P 500'},
+ {symbol:'QNT-USD',name:'Quant Network'}
+];
+let quotesUpdatedAt=null;
+async function loadQuotes(){
+ try{
+  const response=await fetch('./market-quotes.json?t='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw new Error('Ficheiro de cotações indisponível');
+  const payload=await response.json();
+  if(!payload.quotes||typeof payload.quotes!=='object')throw new Error('Formato inválido');
+  quotesUpdatedAt=payload.updated_at||null;
+  for(const a of assets){
+   const q=payload.quotes[a.symbol];
+   if(!q||!Number.isFinite(Number(q.price))||!Array.isArray(q.history)||!q.history.length){a.quote=null;continue;}
+   a.quote={...q,price:Number(q.price),change_percent:Number(q.change_percent),history:q.history.map(Number).filter(Number.isFinite)};
+  }
+ }catch(err){console.warn('Cotações:',err.message);for(const a of assets)a.quote=null;}
+ renderAssets();
+}
 const markets=[{name:'S&P 500',region:'EUA',up:{name:'Empresa demonstrativa A',ticker:'DEMO-A',pct:8.4,description:'Exemplo fictício de uma empresa tecnológica.'},down:{name:'Empresa demonstrativa B',ticker:'DEMO-B',pct:-5.2,description:'Exemplo fictício de uma empresa industrial.'}},{name:'EURO STOXX 50',region:'EUROPA',up:{name:'Empresa demonstrativa C',ticker:'DEMO-C',pct:6.1,description:'Exemplo fictício de uma empresa europeia.'},down:{name:'Empresa demonstrativa D',ticker:'DEMO-D',pct:-4.8,description:'Exemplo fictício de uma empresa europeia.'}},{name:'ASIAN TITANS 50',region:'ÁSIA-PACÍFICO',up:{name:'Empresa demonstrativa E',ticker:'DEMO-E',pct:7.3,description:'Exemplo fictício de uma empresa da Ásia-Pacífico.'},down:{name:'Empresa demonstrativa F',ticker:'DEMO-F',pct:-3.9,description:'Exemplo fictício de uma empresa da Ásia-Pacífico.'}}];
 const fmt=(n,c)=>new Intl.NumberFormat('pt-PT',{style:'currency',currency:c,maximumFractionDigits:2}).format(n);
 const dateFmt=new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',weekday:'long',day:'numeric',month:'long',year:'numeric'});
 const timeFmt=tz=>new Intl.DateTimeFormat('pt-PT',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
 function updateClocks(){const now=new Date();document.getElementById('today').textContent=dateFmt.format(now);const cities=[['NOVA IORQUE','America/New_York',false],['LISBOA','Europe/Lisbon',false],['TÓQUIO','Asia/Tokyo',false]];document.getElementById('clocks').innerHTML=cities.map(([name,tz,central])=>`<div class="clock ${central?'lisbon':''}"><div class="city">${name}</div><div class="time">${timeFmt(tz).format(now)}</div><div class="status">ESTADO INDISPONÍVEL</div></div>`).join('')}
-function series(seed,change){let val=50;const out=[];for(let i=0;i<90;i++){val+=(Math.sin((i+seed)*1.7)*1.1+Math.sin((i+seed)*.43)*1.9)*.12+change*.024;out.push(val)}return out}
-function draw(canvas,asset){if(!canvas)return;const r=canvas.getBoundingClientRect();if(r.width<10||r.height<10)return;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);const w=r.width,h=r.height,p={l:5,r:34,t:11,b:10},cw=w-p.l-p.r,ch=h-p.t-p.b;if(cw<10||ch<8)return;const vals=series(asset.seed,asset.change),lo=Math.min(...vals)-.8,hi=Math.max(...vals)+.8,x=i=>p.l+i*cw/(vals.length-1),y=v=>p.t+(hi-v)*ch/(hi-lo),color=asset.change>=0?'#36d49a':'#f06f76';const grad=ctx.createLinearGradient(0,p.t,0,h);grad.addColorStop(0,asset.change>=0?'rgba(54,212,154,.18)':'rgba(240,111,118,.18)');grad.addColorStop(1,'rgba(0,0,0,0)');ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));ctx.lineTo(x(vals.length-1),h-p.b);ctx.lineTo(x(0),h-p.b);ctx.closePath();ctx.fillStyle=grad;ctx.fill();ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));ctx.strokeStyle=color;ctx.lineWidth=2;ctx.lineJoin='round';ctx.stroke();ctx.fillStyle=color;ctx.beginPath();ctx.arc(x(vals.length-1),y(vals.at(-1)),2.8,0,Math.PI*2);ctx.fill()}
-function render(){document.getElementById('assets').innerHTML=assets.map((a,i)=>`<article class="asset"><div class="asset-info"><div class="ticker">${a.symbol}</div><div class="subtitle">${a.name}</div><div class="quote"><span class="price">${fmt(a.price,a.currency)}</span><span class="change ${a.change>=0?'up':'down'}">${a.change>=0?'▲':'▼'} ${Math.abs(a.change).toFixed(2)}%</span></div></div><div class="chartbox"><canvas id="chart${i}" aria-label="Gráfico ilustrativo ${a.symbol}"></canvas><span class="chart-caption">1 MÊS</span></div></article>`).join('');document.getElementById('markets').innerHTML=markets.map((m,mi)=>`<article class="market"><div><div class="market-title"><h2>${m.name}</h2><span class="region">${m.region}</span></div></div>${['up','down'].map(type=>{const a=m[type];return `<button class="mover" data-market="${mi}" data-type="${type}"><span><small><span class="mover-arrow ${type==='up'?'up':'down'}">${type==='up'?'▲':'▼'}</span> ${type==='up'?'MAIOR SUBIDA':'MAIOR DESCIDA'}</small><strong>${a.ticker}</strong></span><span class="change ${type==='up'?'up':'down'}">${a.pct>0?'+':''}${a.pct.toFixed(1)}%</span></button>`}).join('')}</article>`).join('');redraw();document.querySelectorAll('.mover').forEach(button=>button.addEventListener('click',()=>{const m=markets[Number(button.dataset.market)],a=m[button.dataset.type];document.getElementById('detailContent').innerHTML=`<small>DEMONSTRAÇÃO FICTÍCIA · ${m.name}</small><h2>${a.name}</h2><p><strong>${a.ticker}</strong> · Variação semanal ilustrativa: <strong>${a.pct>0?'+':''}${a.pct}%</strong></p><p>${a.description}</p><p>Não existem notícias verificadas nem uma explicação real do movimento nesta versão. Estes valores e empresas são exclusivamente demonstrativos.</p>`;document.getElementById('details').showModal()}))}
+function draw(canvas,asset){
+ if(!canvas||!asset.quote||asset.quote.history.length<2)return;
+ const r=canvas.getBoundingClientRect();if(r.width<10||r.height<10)return;
+ const dpr=Math.min(window.devicePixelRatio||1,2);
+ canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);
+ const ctx=canvas.getContext('2d');ctx.scale(dpr,dpr);
+ const w=r.width,h=r.height,p={l:5,r:34,t:11,b:10},cw=w-p.l-p.r,ch=h-p.t-p.b;
+ if(cw<10||ch<8)return;
+ const vals=asset.quote.history, min=Math.min(...vals),max=Math.max(...vals),pad=Math.max((max-min)*.16,Math.abs(max)*.0003,.001),lo=min-pad,hi=max+pad;
+ const x=i=>p.l+i*cw/(vals.length-1),y=v=>p.t+(hi-v)*ch/(hi-lo);
+ const rising=asset.quote.change_percent>=0,color=rising?'#36d49a':'#f06f76';
+ const grad=ctx.createLinearGradient(0,p.t,0,h);
+ grad.addColorStop(0,rising?'rgba(54,212,154,.18)':'rgba(240,111,118,.18)');grad.addColorStop(1,'rgba(0,0,0,0)');
+ ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));
+ ctx.lineTo(x(vals.length-1),h-p.b);ctx.lineTo(x(0),h-p.b);ctx.closePath();ctx.fillStyle=grad;ctx.fill();
+ ctx.beginPath();vals.forEach((v,i)=>i?ctx.lineTo(x(i),y(v)):ctx.moveTo(x(i),y(v)));
+ ctx.strokeStyle=color;ctx.lineWidth=2;ctx.lineJoin='round';ctx.stroke();
+ ctx.fillStyle=color;ctx.beginPath();ctx.arc(x(vals.length-1),y(vals.at(-1)),2.8,0,Math.PI*2);ctx.fill();
+}
+function renderAssets(){
+ const holder=document.getElementById('assets');if(!holder)return;
+ holder.innerHTML=assets.map((a,i)=>{
+  const q=a.quote,valid=q&&Number.isFinite(q.change_percent);
+  const percent=valid?`<span class="change ${q.change_percent>=0?'up':'down'}">${q.change_percent>=0?'▲':'▼'} ${Math.abs(q.change_percent).toFixed(2)}%</span>`:'';
+  const price=q?fmt(q.price,q.currency||'USD'):'Indisponível';
+  const caption=q?(q.period_label|| (a.symbol==='QNT-USD'?'00H–24H · LISBOA':'SESSÃO')):'SEM DADOS';
+  const updated=q&&q.as_of?new Intl.DateTimeFormat('pt-PT',{timeZone:'Europe/Lisbon',hour:'2-digit',minute:'2-digit'}).format(new Date(q.as_of)):null;
+  const label=updated?` · ${updated}`:'';
+  return `<article class="asset"><div class="asset-info"><div class="ticker">${a.symbol}</div><div class="subtitle">${a.name}</div><div class="quote"><span class="price">${price}</span>${percent}</div></div><div class="chartbox"><canvas id="chart${i}" aria-label="Gráfico intradiário ${a.symbol}"></canvas><span class="chart-caption">${caption}${label}</span></div></article>`;
+ }).join('');redraw();
+}
+function render(){renderAssets();document.getElementById('markets').innerHTML=markets.map((m,mi)=>`<article class="market"><div><div class="market-title"><h2>${m.name}</h2><span class="region">${m.region}</span></div></div>${['up','down'].map(type=>{const a=m[type];return `<button class="mover" data-market="${mi}" data-type="${type}"><span><small><span class="mover-arrow ${type==='up'?'up':'down'}">${type==='up'?'▲':'▼'}</span> ${type==='up'?'MAIOR SUBIDA':'MAIOR DESCIDA'}</small><strong>${a.ticker}</strong></span><span class="change ${type==='up'?'up':'down'}">${a.pct>0?'+':''}${a.pct.toFixed(1)}%</span></button>`}).join('')}</article>`).join('');redraw();document.querySelectorAll('.mover').forEach(button=>button.addEventListener('click',()=>{const m=markets[Number(button.dataset.market)],a=m[button.dataset.type];document.getElementById('detailContent').innerHTML=`<small>DEMONSTRAÇÃO FICTÍCIA · ${m.name}</small><h2>${a.name}</h2><p><strong>${a.ticker}</strong> · Variação semanal ilustrativa: <strong>${a.pct>0?'+':''}${a.pct}%</strong></p><p>${a.description}</p><p>Não existem notícias verificadas nem uma explicação real do movimento nesta versão. Estes valores e empresas são exclusivamente demonstrativos.</p>`;document.getElementById('details').showModal()}))}
 function redraw(){assets.forEach((a,i)=>draw(document.getElementById('chart'+i),a))}
-ensureNewsPanel();updateClocks();setInterval(updateClocks,1000);render();window.addEventListener('resize',redraw);loadNews();document.getElementById('close').onclick=()=>document.getElementById('details').close();document.getElementById('details').addEventListener('click',e=>{if(e.target.id==='details')e.target.close()});if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
+ensureNewsPanel();updateClocks();setInterval(updateClocks,1000);render();loadQuotes();loadWeekly();setInterval(loadQuotes,60000);window.addEventListener('resize',redraw);loadNews();document.getElementById('close').onclick=()=>document.getElementById('details').close();document.getElementById('details').addEventListener('click',e=>{if(e.target.id==='details')e.target.close()});if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
 
 
 
@@ -76,3 +126,21 @@ async function loadInsights(){
  }catch(e){/* explicit empty state is intentional */}
 }
 loadInsights();
+
+
+async function loadWeekly(){
+  try {
+    const response = await fetch(
+      './weekly-performance.json?t=' + Date.now(),
+      {cache:'no-store'}
+    );
+    if(!response.ok) throw new Error('Ficheiro indisponível');
+    const data = await response.json();
+    if(!Array.isArray(data.markets) || data.markets.length !== 3)
+      throw new Error('Dados inválidos');
+    markets = data.markets;
+    render();
+  } catch(err) {
+    console.warn('Weekly Performance:', err.message);
+  }
+}

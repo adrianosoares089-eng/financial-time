@@ -1,0 +1,55 @@
+{
+  "calculation_date": "2026-10-26",
+  "base_date": "2026-10-23",
+  "end_date": "2026-10-27",
+  "markets": [
+    {
+      "name": "S&P 500",
+      "region": "EUA",
+      "up": {
+        "name": "Comfort Systems USA",
+        "ticker": "FIX",
+        "pct": 6.69
+      },
+      "down": {
+        "name": "Fair Isaac",
+        "ticker": "FICO",
+        "pct": -8.11
+      },
+      "coverage": 502,
+      "total": 503
+    },
+    {
+      "name": "EURO STOXX 50",
+      "region": "EUROPA",
+      "up": {
+        "name": "Hermès",
+        "ticker": "RMS.PA",
+        "pct": 4.4
+      },
+      "down": {
+        "name": "Banco Santander",
+        "ticker": "SAN.MC",
+        "pct": -3.53
+      },
+      "coverage": 50,
+      "total": 50
+    },
+    {
+      "name": "ASIAN TITANS 50",
+      "region": "ÁSIA-PACÍFICO",
+      "up": {
+        "name": "Mitsubishi Corporation",
+        "ticker": "8058.T",
+        "pct": 4.14
+      },
+      "down": {
+        "name": "Tokyo Electron",
+        "ticker": "8035.T",
+        "pct": -3.68
+      },
+      "coverage": 50,
+      "total": 50
+    }
+  ]
+}
