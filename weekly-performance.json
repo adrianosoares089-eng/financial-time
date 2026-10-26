@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Siemens Energy",
-        "ticker": "ENR.DE",
-        "pct": 3.77
+        "name": "Adidas",
+        "ticker": "ADS.DE",
+        "pct": 0.0
       },
       "down": {
-        "name": "EssilorLuxottica",
-        "ticker": "EL.PA",
-        "pct": -3.42
+        "name": "UniCredit",
+        "ticker": "UCG.MI",
+        "pct": 0.0
       },
       "coverage": 50,
       "total": 50
