@@ -23,9 +23,9 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Adidas",
-        "ticker": "ADS.DE",
-        "pct": 0.0
+        "name": "Nokia",
+        "ticker": "NOKIA.HE",
+        "pct": 6.35
       },
       "down": {
         "name": "UniCredit",
@@ -41,12 +41,12 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 5.4
+        "pct": 5.01
       },
       "down": {
-        "name": "Delta Electronics",
-        "ticker": "2308.TW",
-        "pct": -4.17
+        "name": "Xiaomi",
+        "ticker": "1810.HK",
+        "pct": -4.7
       },
       "coverage": 50,
       "total": 50
