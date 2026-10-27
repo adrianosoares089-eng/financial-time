@@ -9,12 +9,12 @@
       "up": {
         "name": "Lumentum",
         "ticker": "LITE",
-        "pct": 14.96
+        "pct": 14.55
       },
       "down": {
         "name": "Fair Isaac",
         "ticker": "FICO",
-        "pct": -14.98
+        "pct": -15.13
       },
       "coverage": 503,
       "total": 503
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Bharti Airtel",
-        "ticker": "BHARTIARTL.NS",
-        "pct": 4.58
+        "name": "SK Hynix",
+        "ticker": "000660.KS",
+        "pct": 5.01
       },
       "down": {
-        "name": "Tokyo Electron",
-        "ticker": "8035.T",
-        "pct": -3.68
+        "name": "Xiaomi",
+        "ticker": "1810.HK",
+        "pct": -4.25
       },
       "coverage": 50,
       "total": 50
