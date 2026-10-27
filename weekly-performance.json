@@ -25,12 +25,12 @@
       "up": {
         "name": "Nokia",
         "ticker": "NOKIA.HE",
-        "pct": 6.35
+        "pct": 7.41
       },
       "down": {
-        "name": "UniCredit",
-        "ticker": "UCG.MI",
-        "pct": 0.0
+        "name": "Banco Santander",
+        "ticker": "SAN.MC",
+        "pct": -3.25
       },
       "coverage": 50,
       "total": 50
@@ -46,7 +46,7 @@
       "down": {
         "name": "Xiaomi",
         "ticker": "1810.HK",
-        "pct": -4.7
+        "pct": -4.25
       },
       "coverage": 50,
       "total": 50
