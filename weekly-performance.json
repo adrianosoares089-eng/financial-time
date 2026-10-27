@@ -9,12 +9,12 @@
       "up": {
         "name": "Lumentum",
         "ticker": "LITE",
-        "pct": 8.19
+        "pct": 14.96
       },
       "down": {
         "name": "Fair Isaac",
         "ticker": "FICO",
-        "pct": -13.15
+        "pct": -14.98
       },
       "coverage": 503,
       "total": 503
@@ -25,12 +25,12 @@
       "up": {
         "name": "Nokia",
         "ticker": "NOKIA.HE",
-        "pct": 7.41
+        "pct": 9.54
       },
       "down": {
-        "name": "Banco Santander",
-        "ticker": "SAN.MC",
-        "pct": -3.25
+        "name": "Eni",
+        "ticker": "ENI.MI",
+        "pct": -4.32
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "SK Hynix",
-        "ticker": "000660.KS",
-        "pct": 5.01
+        "name": "Bharti Airtel",
+        "ticker": "BHARTIARTL.NS",
+        "pct": 4.58
       },
       "down": {
-        "name": "Xiaomi",
-        "ticker": "1810.HK",
-        "pct": -4.25
+        "name": "Tokyo Electron",
+        "ticker": "8035.T",
+        "pct": -3.68
       },
       "coverage": 50,
       "total": 50
