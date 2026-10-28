@@ -16,7 +16,7 @@
         "ticker": "FICO",
         "pct": -15.16
       },
-      "coverage": 503,
+      "coverage": 502,
       "total": 503
     },
     {
@@ -25,12 +25,12 @@
       "up": {
         "name": "Siemens Energy",
         "ticker": "ENR.DE",
-        "pct": 12.76
+        "pct": 12.62
       },
       "down": {
         "name": "Adyen",
         "ticker": "ADYEN.AS",
-        "pct": -12.3
+        "pct": -13.4
       },
       "coverage": 50,
       "total": 50
