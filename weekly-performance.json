@@ -9,12 +9,12 @@
       "up": {
         "name": "Vertiv",
         "ticker": "VRT",
-        "pct": 21.07
+        "pct": 25.1
       },
       "down": {
-        "name": "Xylem Inc.",
-        "ticker": "XYL",
-        "pct": -18.98
+        "name": "F5, Inc.",
+        "ticker": "FFIV",
+        "pct": -19.74
       },
       "coverage": 503,
       "total": 503
@@ -25,12 +25,12 @@
       "up": {
         "name": "Siemens Energy",
         "ticker": "ENR.DE",
-        "pct": 11.04
+        "pct": 12.29
       },
       "down": {
         "name": "Adyen",
         "ticker": "ADYEN.AS",
-        "pct": -12.42
+        "pct": -13.48
       },
       "coverage": 50,
       "total": 50
@@ -39,9 +39,9 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "MediaTek",
-        "ticker": "2454.TW",
-        "pct": 5.61
+        "name": "SK Hynix",
+        "ticker": "000660.KS",
+        "pct": 16.44
       },
       "down": {
         "name": "Xiaomi",
