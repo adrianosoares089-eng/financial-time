@@ -9,14 +9,14 @@
       "up": {
         "name": "Vertiv",
         "ticker": "VRT",
-        "pct": 25.1
+        "pct": 25.02
       },
       "down": {
         "name": "F5, Inc.",
         "ticker": "FFIV",
         "pct": -19.74
       },
-      "coverage": 503,
+      "coverage": 502,
       "total": 503
     },
     {
