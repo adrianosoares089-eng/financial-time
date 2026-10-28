@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-10-27",
+  "calculation_date": "2026-10-28",
   "base_date": "2026-10-23",
-  "end_date": "2026-10-28",
+  "end_date": "2026-10-29",
   "markets": [
     {
       "name": "S&P 500",
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Siemens Energy",
-        "ticker": "ENR.DE",
-        "pct": 8.34
+        "name": "Nokia",
+        "ticker": "NOKIA.HE",
+        "pct": 5.86
       },
       "down": {
-        "name": "Eni",
-        "ticker": "ENI.MI",
-        "pct": -4.32
+        "name": "EssilorLuxottica",
+        "ticker": "EL.PA",
+        "pct": -3.42
       },
       "coverage": 50,
       "total": 50
@@ -41,12 +41,12 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 5.01
+        "pct": 14.49
       },
       "down": {
         "name": "Xiaomi",
         "ticker": "1810.HK",
-        "pct": -4.25
+        "pct": -4.03
       },
       "coverage": 50,
       "total": 50
