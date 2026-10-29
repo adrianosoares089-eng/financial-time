@@ -9,12 +9,12 @@
       "up": {
         "name": "Vertiv",
         "ticker": "VRT",
-        "pct": 26.57
+        "pct": 26.55
       },
       "down": {
         "name": "ServiceNow",
         "ticker": "NOW",
-        "pct": -31.02
+        "pct": -31.01
       },
       "coverage": 503,
       "total": 503
@@ -25,12 +25,12 @@
       "up": {
         "name": "Siemens Energy",
         "ticker": "ENR.DE",
-        "pct": 14.83
+        "pct": 12.29
       },
       "down": {
         "name": "Adyen",
         "ticker": "ADYEN.AS",
-        "pct": -13.7
+        "pct": -13.48
       },
       "coverage": 50,
       "total": 50
