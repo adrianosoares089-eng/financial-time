@@ -41,12 +41,12 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 16.44
+        "pct": 23.41
       },
       "down": {
-        "name": "Xiaomi",
-        "ticker": "1810.HK",
-        "pct": -4.4
+        "name": "Hitachi",
+        "ticker": "6501.T",
+        "pct": -7.01
       },
       "coverage": 50,
       "total": 50
