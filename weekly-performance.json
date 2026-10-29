@@ -1,36 +1,36 @@
 {
-  "calculation_date": "2026-10-28",
+  "calculation_date": "2026-10-29",
   "base_date": "2026-10-23",
-  "end_date": "2026-10-29",
+  "end_date": "2026-10-30",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "Vertiv",
-        "ticker": "VRT",
-        "pct": 25.02
+        "name": "Lumentum",
+        "ticker": "LITE",
+        "pct": 14.55
       },
       "down": {
-        "name": "F5, Inc.",
-        "ticker": "FFIV",
-        "pct": -19.74
+        "name": "Fair Isaac",
+        "ticker": "FICO",
+        "pct": -15.16
       },
-      "coverage": 502,
+      "coverage": 503,
       "total": 503
     },
     {
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Siemens Energy",
-        "ticker": "ENR.DE",
-        "pct": 12.29
+        "name": "Nokia",
+        "ticker": "NOKIA.HE",
+        "pct": 9.54
       },
       "down": {
-        "name": "Adyen",
-        "ticker": "ADYEN.AS",
-        "pct": -13.48
+        "name": "Eni",
+        "ticker": "ENI.MI",
+        "pct": -4.32
       },
       "coverage": 50,
       "total": 50
