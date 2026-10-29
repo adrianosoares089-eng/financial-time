@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Nokia",
-        "ticker": "NOKIA.HE",
-        "pct": 9.54
+        "name": "Siemens Energy",
+        "ticker": "ENR.DE",
+        "pct": 13.94
       },
       "down": {
-        "name": "Eni",
-        "ticker": "ENI.MI",
-        "pct": -4.32
+        "name": "Adyen",
+        "ticker": "ADYEN.AS",
+        "pct": -11.47
       },
       "coverage": 50,
       "total": 50
@@ -41,12 +41,12 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 20.6
+        "pct": 19.5
       },
       "down": {
         "name": "Hitachi",
         "ticker": "6501.T",
-        "pct": -9.4
+        "pct": -8.83
       },
       "coverage": 50,
       "total": 50
