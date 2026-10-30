@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Siemens Energy",
-        "ticker": "ENR.DE",
-        "pct": 12.29
+        "name": "Bayer",
+        "ticker": "BAYN.DE",
+        "pct": 13.1
       },
       "down": {
         "name": "Adyen",
         "ticker": "ADYEN.AS",
-        "pct": -13.48
+        "pct": -12.15
       },
       "coverage": 50,
       "total": 50
@@ -41,7 +41,7 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 10.81
+        "pct": 11.04
       },
       "down": {
         "name": "Delta Electronics",
