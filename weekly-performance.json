@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Bayer",
-        "ticker": "BAYN.DE",
-        "pct": 15.01
+        "name": "Siemens Energy",
+        "ticker": "ENR.DE",
+        "pct": 14.83
       },
       "down": {
         "name": "Adyen",
         "ticker": "ADYEN.AS",
-        "pct": -12.53
+        "pct": -13.7
       },
       "coverage": 50,
       "total": 50
