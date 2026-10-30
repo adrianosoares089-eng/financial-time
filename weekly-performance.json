@@ -9,12 +9,12 @@
       "up": {
         "name": "Pentair",
         "ticker": "PNR",
-        "pct": 19.71
+        "pct": 19.82
       },
       "down": {
         "name": "Reddit",
         "ticker": "RDDT",
-        "pct": -37.96
+        "pct": -36.41
       },
       "coverage": 503,
       "total": 503
@@ -41,12 +41,12 @@
       "up": {
         "name": "SK Hynix",
         "ticker": "000660.KS",
-        "pct": 19.5
+        "pct": 11.04
       },
       "down": {
-        "name": "Hitachi",
-        "ticker": "6501.T",
-        "pct": -8.83
+        "name": "Delta Electronics",
+        "ticker": "2308.TW",
+        "pct": -14.42
       },
       "coverage": 50,
       "total": 50
