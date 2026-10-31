@@ -1,20 +1,20 @@
 {
-  "calculation_date": "2026-10-30",
-  "base_date": "2026-10-23",
-  "end_date": "2026-10-31",
+  "calculation_date": "2026-10-31",
+  "base_date": "2026-10-30",
+  "end_date": "2026-11-01",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "Pentair",
-        "ticker": "PNR",
-        "pct": 19.82
+        "name": "3M",
+        "ticker": "MMM",
+        "pct": 0.0
       },
       "down": {
-        "name": "Reddit",
-        "ticker": "RDDT",
-        "pct": -36.41
+        "name": "Zoetis",
+        "ticker": "ZTS",
+        "pct": 0.0
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Siemens Energy",
-        "ticker": "ENR.DE",
-        "pct": 14.83
+        "name": "Adidas",
+        "ticker": "ADS.DE",
+        "pct": 0.0
       },
       "down": {
-        "name": "Adyen",
-        "ticker": "ADYEN.AS",
-        "pct": -13.7
+        "name": "UniCredit",
+        "ticker": "UCG.MI",
+        "pct": 0.0
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "SK Hynix",
-        "ticker": "000660.KS",
-        "pct": 11.04
+        "name": "Toyota Motor",
+        "ticker": "7203.T",
+        "pct": 0.0
       },
       "down": {
-        "name": "Delta Electronics",
-        "ticker": "2308.TW",
-        "pct": -14.42
+        "name": "Public Bank",
+        "ticker": "1295.KL",
+        "pct": 0.0
       },
       "coverage": 50,
       "total": 50
