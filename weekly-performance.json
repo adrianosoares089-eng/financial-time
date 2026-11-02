@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-01",
+  "calculation_date": "2026-11-02",
   "base_date": "2026-10-30",
-  "end_date": "2026-11-02",
+  "end_date": "2026-11-03",
   "markets": [
     {
       "name": "S&P 500",
@@ -23,9 +23,9 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Adidas",
-        "ticker": "ADS.DE",
-        "pct": 0.0
+        "name": "Nordea",
+        "ticker": "NDA-FI.HE",
+        "pct": 0.8
       },
       "down": {
         "name": "UniCredit",
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Toyota Motor",
-        "ticker": "7203.T",
-        "pct": 0.0
+        "name": "Reliance Industries",
+        "ticker": "RELIANCE.NS",
+        "pct": 7.55
       },
       "down": {
-        "name": "Public Bank",
-        "ticker": "1295.KL",
-        "pct": 0.0
+        "name": "Recruit Holdings",
+        "ticker": "6098.T",
+        "pct": -6.41
       },
       "coverage": 50,
       "total": 50
