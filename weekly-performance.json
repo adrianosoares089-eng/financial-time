@@ -9,12 +9,12 @@
       "up": {
         "name": "Idexx Laboratories",
         "ticker": "IDXX",
-        "pct": 21.85
+        "pct": 21.92
       },
       "down": {
         "name": "Lumentum",
         "ticker": "LITE",
-        "pct": -18.59
+        "pct": -19.1
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Adidas",
-        "ticker": "ADS.DE",
-        "pct": 0.0
+        "name": "Ferrari",
+        "ticker": "RACE.MI",
+        "pct": 5.6
       },
       "down": {
-        "name": "UniCredit",
-        "ticker": "UCG.MI",
-        "pct": 0.0
+        "name": "Eni",
+        "ticker": "ENI.MI",
+        "pct": -4.05
       },
       "coverage": 50,
       "total": 50
@@ -39,9 +39,9 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Xiaomi",
-        "ticker": "1810.HK",
-        "pct": 6.12
+        "name": "Reliance Industries",
+        "ticker": "RELIANCE.NS",
+        "pct": 11.6
       },
       "down": {
         "name": "Recruit Holdings",
