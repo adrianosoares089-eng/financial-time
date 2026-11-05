@@ -1,20 +1,20 @@
 {
-  "calculation_date": "2026-11-04",
+  "calculation_date": "2026-11-05",
   "base_date": "2026-10-30",
-  "end_date": "2026-11-05",
+  "end_date": "2026-11-06",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "Idexx Laboratories",
-        "ticker": "IDXX",
-        "pct": 26.73
+        "name": "AppLovin",
+        "ticker": "APP",
+        "pct": 55.84
       },
       "down": {
         "name": "Lumentum",
         "ticker": "LITE",
-        "pct": -25.45
+        "pct": -39.37
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Ferrari",
-        "ticker": "RACE.MI",
-        "pct": 5.6
+        "name": "Deutsche Bank",
+        "ticker": "DBK.DE",
+        "pct": 8.23
       },
       "down": {
-        "name": "Eni",
-        "ticker": "ENI.MI",
-        "pct": -4.05
+        "name": "Siemens Energy",
+        "ticker": "ENR.DE",
+        "pct": -5.88
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Reliance Industries",
-        "ticker": "RELIANCE.NS",
-        "pct": 12.28
+        "name": "Xiaomi",
+        "ticker": "1810.HK",
+        "pct": 18.2
       },
       "down": {
         "name": "Delta Electronics",
         "ticker": "2308.TW",
-        "pct": -8.61
+        "pct": -15.36
       },
       "coverage": 50,
       "total": 50
