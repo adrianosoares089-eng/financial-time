@@ -1,36 +1,36 @@
 {
-  "calculation_date": "2026-11-06",
-  "base_date": "2026-10-30",
-  "end_date": "2026-11-07",
+  "calculation_date": "2026-11-07",
+  "base_date": "2026-11-06",
+  "end_date": "2026-11-08",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "AppLovin",
-        "ticker": "APP",
-        "pct": 71.21
+        "name": "3M",
+        "ticker": "MMM",
+        "pct": 0.0
       },
       "down": {
-        "name": "Lumentum",
-        "ticker": "LITE",
-        "pct": -35.94
+        "name": "Zoetis",
+        "ticker": "ZTS",
+        "pct": 0.0
       },
-      "coverage": 503,
+      "coverage": 502,
       "total": 503
     },
     {
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Bayer",
-        "ticker": "BAYN.DE",
-        "pct": 9.89
+        "name": "Adidas",
+        "ticker": "ADS.DE",
+        "pct": 0.0
       },
       "down": {
-        "name": "Rheinmetall",
-        "ticker": "RHM.DE",
-        "pct": -21.68
+        "name": "UniCredit",
+        "ticker": "UCG.MI",
+        "pct": 0.0
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Xiaomi",
-        "ticker": "1810.HK",
-        "pct": 18.2
+        "name": "Toyota Motor",
+        "ticker": "7203.T",
+        "pct": 0.0
       },
       "down": {
-        "name": "Delta Electronics",
-        "ticker": "2308.TW",
-        "pct": -15.36
+        "name": "Public Bank",
+        "ticker": "1295.KL",
+        "pct": 0.0
       },
       "coverage": 50,
       "total": 50
