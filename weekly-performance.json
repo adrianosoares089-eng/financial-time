@@ -1,20 +1,20 @@
 {
-  "calculation_date": "2026-11-09",
+  "calculation_date": "2026-11-11",
   "base_date": "2026-11-06",
-  "end_date": "2026-11-10",
+  "end_date": "2026-11-12",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "Coherent Corp.",
-        "ticker": "COHR",
-        "pct": 16.79
+        "name": "Advanced Micro Devices",
+        "ticker": "AMD",
+        "pct": 14.74
       },
       "down": {
         "name": "First Solar",
         "ticker": "FSLR",
-        "pct": -4.74
+        "pct": -10.02
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Adidas",
-        "ticker": "ADS.DE",
-        "pct": 0.0
-      },
-      "down": {
         "name": "UniCredit",
         "ticker": "UCG.MI",
-        "pct": 0.0
+        "pct": 6.28
+      },
+      "down": {
+        "name": "Adyen",
+        "ticker": "ADYEN.AS",
+        "pct": -2.27
       },
       "coverage": 50,
       "total": 50
@@ -41,12 +41,12 @@
       "up": {
         "name": "Delta Electronics",
         "ticker": "2308.TW",
-        "pct": 9.95
+        "pct": 20.85
       },
       "down": {
         "name": "Meituan",
         "ticker": "3690.HK",
-        "pct": -6.53
+        "pct": -6.09
       },
       "coverage": 50,
       "total": 50
