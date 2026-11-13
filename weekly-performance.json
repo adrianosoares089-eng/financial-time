@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-11",
+  "calculation_date": "2026-11-13",
   "base_date": "2026-11-06",
-  "end_date": "2026-11-12",
+  "end_date": "2026-11-14",
   "markets": [
     {
       "name": "S&P 500",
@@ -9,12 +9,12 @@
       "up": {
         "name": "Advanced Micro Devices",
         "ticker": "AMD",
-        "pct": 14.74
+        "pct": 30.34
       },
       "down": {
         "name": "First Solar",
         "ticker": "FSLR",
-        "pct": -10.02
+        "pct": -14.34
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "UniCredit",
-        "ticker": "UCG.MI",
-        "pct": 6.28
+        "name": "Infineon Technologies",
+        "ticker": "IFX.DE",
+        "pct": 13.91
       },
       "down": {
-        "name": "Adyen",
-        "ticker": "ADYEN.AS",
-        "pct": -2.27
+        "name": "EssilorLuxottica",
+        "ticker": "EL.PA",
+        "pct": -5.8
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Delta Electronics",
-        "ticker": "2308.TW",
-        "pct": 20.85
+        "name": "MediaTek",
+        "ticker": "2454.TW",
+        "pct": 21.39
       },
       "down": {
         "name": "Meituan",
         "ticker": "3690.HK",
-        "pct": -6.09
+        "pct": -11.5
       },
       "coverage": 50,
       "total": 50
