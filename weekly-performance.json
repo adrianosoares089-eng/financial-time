@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-17",
+  "calculation_date": "2026-11-18",
   "base_date": "2026-11-13",
-  "end_date": "2026-11-18",
+  "end_date": "2026-11-19",
   "markets": [
     {
       "name": "S&P 500",
@@ -16,7 +16,7 @@
         "ticker": "SNDK",
         "pct": -8.58
       },
-      "coverage": 503,
+      "coverage": 502,
       "total": 503
     },
     {
@@ -25,12 +25,12 @@
       "up": {
         "name": "Deutsche Telekom",
         "ticker": "DTE.DE",
-        "pct": 2.48
+        "pct": 1.5
       },
       "down": {
-        "name": "Deutsche Bank",
-        "ticker": "DBK.DE",
-        "pct": -5.35
+        "name": "Siemens",
+        "ticker": "SIE.DE",
+        "pct": -2.45
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Recruit Holdings",
-        "ticker": "6098.T",
-        "pct": 3.62
+        "name": "ITC",
+        "ticker": "ITC.NS",
+        "pct": 3.54
       },
       "down": {
         "name": "Delta Electronics",
         "ticker": "2308.TW",
-        "pct": -14.92
+        "pct": -16.53
       },
       "coverage": 50,
       "total": 50
