@@ -9,14 +9,14 @@
       "up": {
         "name": "Tyson Foods",
         "ticker": "TSN",
-        "pct": 8.72
+        "pct": 8.21
       },
       "down": {
-        "name": "Sandisk",
-        "ticker": "SNDK",
-        "pct": -8.58
+        "name": "Robinhood Markets",
+        "ticker": "HOOD",
+        "pct": -11.14
       },
-      "coverage": 502,
+      "coverage": 503,
       "total": 503
     },
     {
@@ -25,12 +25,12 @@
       "up": {
         "name": "Deutsche Telekom",
         "ticker": "DTE.DE",
-        "pct": 1.5
+        "pct": 1.58
       },
       "down": {
-        "name": "Siemens",
-        "ticker": "SIE.DE",
-        "pct": -2.45
+        "name": "Prosus",
+        "ticker": "PRX.AS",
+        "pct": -10.79
       },
       "coverage": 50,
       "total": 50
@@ -41,12 +41,12 @@
       "up": {
         "name": "ITC",
         "ticker": "ITC.NS",
-        "pct": 3.54
+        "pct": 4.07
       },
       "down": {
         "name": "Delta Electronics",
         "ticker": "2308.TW",
-        "pct": -16.53
+        "pct": -14.52
       },
       "coverage": 50,
       "total": 50
