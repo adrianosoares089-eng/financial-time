@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-18",
+  "calculation_date": "2026-11-20",
   "base_date": "2026-11-13",
-  "end_date": "2026-11-19",
+  "end_date": "2026-11-21",
   "markets": [
     {
       "name": "S&P 500",
@@ -9,12 +9,12 @@
       "up": {
         "name": "Tyson Foods",
         "ticker": "TSN",
-        "pct": 8.21
+        "pct": 10.71
       },
       "down": {
-        "name": "Robinhood Markets",
-        "ticker": "HOOD",
-        "pct": -11.14
+        "name": "Sandisk",
+        "ticker": "SNDK",
+        "pct": -28.37
       },
       "coverage": 503,
       "total": 503
@@ -25,12 +25,12 @@
       "up": {
         "name": "Deutsche Telekom",
         "ticker": "DTE.DE",
-        "pct": 1.58
+        "pct": -0.98
       },
       "down": {
         "name": "Prosus",
         "ticker": "PRX.AS",
-        "pct": -10.79
+        "pct": -15.41
       },
       "coverage": 50,
       "total": 50
@@ -41,12 +41,12 @@
       "up": {
         "name": "ITC",
         "ticker": "ITC.NS",
-        "pct": 4.07
+        "pct": 5.61
       },
       "down": {
         "name": "Delta Electronics",
         "ticker": "2308.TW",
-        "pct": -14.52
+        "pct": -27.42
       },
       "coverage": 50,
       "total": 50
