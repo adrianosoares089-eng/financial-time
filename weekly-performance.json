@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-21",
+  "calculation_date": "2026-11-22",
   "base_date": "2026-11-20",
-  "end_date": "2026-11-22",
+  "end_date": "2026-11-23",
   "markets": [
     {
       "name": "S&P 500",
@@ -16,7 +16,7 @@
         "ticker": "ZTS",
         "pct": 0.0
       },
-      "coverage": 503,
+      "coverage": 502,
       "total": 503
     },
     {
