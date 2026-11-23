@@ -1,7 +1,7 @@
 {
-  "calculation_date": "2026-11-22",
+  "calculation_date": "2026-11-23",
   "base_date": "2026-11-20",
-  "end_date": "2026-11-23",
+  "end_date": "2026-11-24",
   "markets": [
     {
       "name": "S&P 500",
@@ -16,7 +16,7 @@
         "ticker": "ZTS",
         "pct": 0.0
       },
-      "coverage": 502,
+      "coverage": 503,
       "total": 503
     },
     {
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "Toyota Motor",
-        "ticker": "7203.T",
-        "pct": 0.0
+        "name": "MediaTek",
+        "ticker": "2454.TW",
+        "pct": 10.0
       },
       "down": {
-        "name": "Public Bank",
-        "ticker": "1295.KL",
-        "pct": 0.0
+        "name": "NAVER",
+        "ticker": "035420.KS",
+        "pct": -8.29
       },
       "coverage": 50,
       "total": 50
