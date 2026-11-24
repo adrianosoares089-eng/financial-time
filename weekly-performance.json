@@ -1,20 +1,20 @@
 {
-  "calculation_date": "2026-11-23",
+  "calculation_date": "2026-11-24",
   "base_date": "2026-11-20",
-  "end_date": "2026-11-24",
+  "end_date": "2026-11-25",
   "markets": [
     {
       "name": "S&P 500",
       "region": "EUA",
       "up": {
-        "name": "3M",
-        "ticker": "MMM",
-        "pct": 0.0
+        "name": "Nvidia",
+        "ticker": "NVDA",
+        "pct": 31.48
       },
       "down": {
-        "name": "Zoetis",
-        "ticker": "ZTS",
-        "pct": 0.0
+        "name": "CrowdStrike",
+        "ticker": "CRWD",
+        "pct": -8.92
       },
       "coverage": 503,
       "total": 503
@@ -23,14 +23,14 @@
       "name": "EURO STOXX 50",
       "region": "EUROPA",
       "up": {
-        "name": "Adidas",
-        "ticker": "ADS.DE",
-        "pct": 0.0
+        "name": "ASML Holding",
+        "ticker": "ASML.AS",
+        "pct": 6.4
       },
       "down": {
-        "name": "UniCredit",
-        "ticker": "UCG.MI",
-        "pct": 0.0
+        "name": "Bayer",
+        "ticker": "BAYN.DE",
+        "pct": -2.44
       },
       "coverage": 50,
       "total": 50
@@ -39,14 +39,14 @@
       "name": "ASIAN TITANS 50",
       "region": "ÁSIA-PACÍFICO",
       "up": {
-        "name": "MediaTek",
-        "ticker": "2454.TW",
-        "pct": 10.0
+        "name": "United Microelectronics",
+        "ticker": "2303.TW",
+        "pct": 20.92
       },
       "down": {
-        "name": "NAVER",
-        "ticker": "035420.KS",
-        "pct": -8.29
+        "name": "Xiaomi",
+        "ticker": "1810.HK",
+        "pct": -4.12
       },
       "coverage": 50,
       "total": 50
